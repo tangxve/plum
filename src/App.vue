@@ -25,6 +25,8 @@ interface Branch {
   theta: number
 }
 
+const pendingTasks: Function[] = []
+
 function init() {
   ctx.strokeStyle = '#fff'
 
@@ -35,8 +37,6 @@ function init() {
     theta: -Math.PI / 2,
   })
 }
-
-const pendingTasks: Function[] = []
 
 function setp(b: Branch, depth = 0) {
   const end = getEndPoint(b)
